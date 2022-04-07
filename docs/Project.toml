@@ -1,0 +1,3 @@
+[deps]
+Beamformer = "c40fc6e1-ac57-4093-a741-839d1cab8f0c"
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"

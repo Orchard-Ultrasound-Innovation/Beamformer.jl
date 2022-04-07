@@ -1,0 +1,13 @@
+name = "Beamformer"
+uuid = "c40fc6e1-ac57-4093-a741-839d1cab8f0c"
+authors = ["Morten F. Rasmussen <10264458+mofii@users.noreply.github.com> and contributors"]
+version = "0.1.0"
+
+[compat]
+julia = "1.7"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
