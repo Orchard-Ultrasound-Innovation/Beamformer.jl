@@ -7,10 +7,11 @@ import Unitful
 
 export das_beamformer!
 export Point2D, Point3D
-export AbstractPixel, Pixel2D, Pixel3D
-export AbstractPixels, Pixels2D, Pixels3D
-export AbstractScanline, Scanline2D, Scanline2D
-export AbstractTransducer, Transducer1DArray, Transducer2DArray
+export Pixel2D, Pixel3D
+export Pixels2D, Pixels3D
+export Scanline2D, Scanline2D
+export Bmode2D, Bmode3D
+export Transducer1DArray, Transducer2DArray
 export LinearArray, define_xdc_linear_array
 
 # Write your package code here.
