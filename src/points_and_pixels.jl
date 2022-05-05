@@ -25,12 +25,17 @@ norm_vector(::Point2D) = Point2D(0.0,1.0)
 norm_vector(::Point3D) = Point3D(0.0,0.0,1.0)
 
 abstract type AbstractPixel end
-struct Pixel2D{TC,TV} <: AbstractPixel
+struct Pixel2D{TC,TV,N} <: AbstractPixel
     coord::Point2D{TC}
+    x_idx::N
+    z_idx::N
     val::TV
 end
-struct Pixel3D{cT,vT}  <: AbstractPixel
+struct Pixel3D{cT,vT,N}  <: AbstractPixel
     coord::Point3D{cT}
+    x_idx::N
+    y_idx::N
+    z_idx::N
     val::vT
 end
 

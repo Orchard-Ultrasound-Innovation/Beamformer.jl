@@ -28,16 +28,15 @@ function define_bmode_2d(x_axis, z_axis)
     num_px_x = length(x_axis)
     num_px_z = length(z_axis)
     num_pxs = num_px_x * num_px_z
-    TC = eltype(x_axis)
+    TC = promote_type(eltype(x_axis), eltype(z_axis))
     TV = Complex{TC}
     pxs = Pixel2D{TC,TV}[]
 
     for (xi,x) in x_axis
         for (zi,z) in z_axis
-            push!(pxs, Pixel2D( Point2D(x,z), zero(TV)))
+            push!(pxs, Pixel2D(Point2D(x,z), xi, zi, zero(TV)) )
         end
     end
 
     return Bmode2D(nu_px_x, num_px_z, num_pxs, pxs)
-
 end
