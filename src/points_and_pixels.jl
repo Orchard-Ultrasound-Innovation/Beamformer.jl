@@ -1,3 +1,13 @@
+struct Dimension{dim}
+    function Dimension(dim)
+        if !in(dim, [2,3])
+            error("Dimension can only take on the value 2 and 3, i.e., be 2D or 3D.")
+        end
+        return new{dim}()
+    end
+end
+Dimension(dim) = Dimension{dim}()
+
 struct Point2D{T} <: StaticArrays.FieldVector{2, T}
     x::T
     z::T
