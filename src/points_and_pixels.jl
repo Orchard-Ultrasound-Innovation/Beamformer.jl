@@ -1,6 +1,6 @@
 struct Point2D{T} <: StaticArrays.FieldVector{2, T}
     x::T
-    y::T
+    z::T
 end
 
 struct Point3D{T} <: StaticArrays.FieldVector{3, T}
